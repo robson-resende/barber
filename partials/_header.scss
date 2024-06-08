@@ -1,0 +1,134 @@
+
+header{
+    width: 100%;
+}
+
+.header-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+i{
+    color: $white-normal;
+}
+
+.header-icons{
+    display: flex;
+    gap: 14px;
+
+    i{
+        color: $red-light;
+        transition: color 0.5s;
+    }
+}
+
+.header-icons .instagram{
+    animation: instagram 0.7s infinite alternate;
+    color: $red-light;
+}
+
+.header-icons .facebook{
+    animation: facebook 0.8s infinite alternate;
+    color: $red-light;
+}
+
+.header-icons .tiktok{
+    animation: tiktok 0.9s infinite alternate;
+    color: $red-light;
+}
+
+@keyframes instagram{
+    from{
+        transform: translateY(0) scale(1);
+    }
+    to{
+        transform: translateY(-15px) scale(1.1);
+    }
+}
+
+@keyframes facebook{
+    from{
+        transform: translateY(0) scale(1);
+    }
+    to{
+        transform: translateY(-30px) scale(1.1);
+    }
+}
+
+@keyframes tiktok{
+    from{
+        transform: translateY(0) scale(1);
+    }
+    to{
+        transform: translateY(-20px) scale(1.1);
+    }
+}
+
+
+.header-icons .instagram:hover{
+    i{
+        color: purple;
+    }
+}
+
+.header-icons .facebook:hover{
+    i{
+        color: blue;
+    }
+}
+
+.header-icons .tiktok:hover{
+    i{
+        color: rgb(83, 80, 80);
+    }
+}
+
+
+
+.header-button{
+    border: 1px solid $white-normal;
+    padding: 8px 24px;
+    border-radius: 4px;
+    color: $white-normal;
+    background-color: transparent;
+    transition: background-color 0.8s;
+    border: 1px solid $red-light;
+    background-color: $red-light;
+    transition: background-color 0.8s;
+}
+
+.header-button:hover{
+    background-color: red;
+    color: $white-normal;
+}
+
+.header-logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 14px;
+}
+
+@media screen and (max-width: 768px){
+    .header-content{
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        i{
+            margin-top: 16px;
+            font-size: 34px;
+        }
+    }
+
+    .header-logo img{
+        width: 160px;
+        margin-top: 46px;
+    }
+
+    .header-button{
+        display: none;
+    }
+}
